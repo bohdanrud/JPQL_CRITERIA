@@ -32,4 +32,14 @@ public class User extends BaseEntity{
 	@JoinColumn(name = "city_id")
 	private City city;
 
+	@Override
+	public String toString() {
+		return "User [full_name=" + full_name + ", age=" + age + ", getId()=" + getId() + "]";
+	}
+
+	
+
+	
+
+	
 }

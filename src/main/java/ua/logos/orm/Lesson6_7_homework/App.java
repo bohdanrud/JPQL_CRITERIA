@@ -6,6 +6,7 @@ import javax.persistence.Persistence;
 
 import database_tools.FillInDataBase;
 import database_tools.RandomFillIn;
+import queries.JPQLQueries;
 
 public class App 
 {
@@ -16,7 +17,8 @@ public class App
 		EntityManager em = factory.createEntityManager();
 		em.getTransaction().begin();
     	
-		RandomFillIn.fillInDatabase(em);
+		//RandomFillIn.fillInDatabase(em);
+		JPQLQueries.jpqlQuery(em,1);
     	
 		em.getTransaction().commit();
 		em.close();

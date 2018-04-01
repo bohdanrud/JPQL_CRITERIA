@@ -23,9 +23,16 @@ public class Country extends BaseEntity{
 	private String country_name;
 	
 	@OneToMany(mappedBy = "city_name")
-	private List<City> comments = new ArrayList<City>(); 
+	private List<City> cities = new ArrayList<City>(); 
 	
+	@Override
+	public String toString() {
+		return "Country [country_name=" + country_name + ", getId()=" + getId() + "]";
+	}
+
 	@OneToMany(mappedBy = "full_name")
 	private List<User> users = new ArrayList<User>();
+
+	
 
 }

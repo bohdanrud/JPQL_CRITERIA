@@ -30,4 +30,13 @@ public class City extends BaseEntity{
 	
 	@OneToMany(mappedBy = "full_name")
 	private List<User> users = new ArrayList<User>();
+
+	@Override
+	public String toString() {
+		return "City [city_name=" + city_name + ", getId()=" + getId() + "]";
+	}
+
+	
+	
+	
 }

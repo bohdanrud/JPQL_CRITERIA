@@ -63,7 +63,7 @@ public class FillInDataBase {
 	
 	public static void addRandomUsers(EntityManager em) {
 		try {
-            File file = new File("random_cities.txt");
+            File file = new File("random_user_names.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader BReader = new BufferedReader(fileReader);
             String newName = BReader.readLine();
