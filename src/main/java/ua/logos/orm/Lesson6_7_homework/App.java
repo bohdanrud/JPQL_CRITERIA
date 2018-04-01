@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import database_tools.FillInDataBase;
+import database_tools.RandomFillIn;
 
 public class App 
 {
@@ -15,9 +16,7 @@ public class App
 		EntityManager em = factory.createEntityManager();
 		em.getTransaction().begin();
     	
-		
-		FillInDataBase.addRandomCountries(em);
-    	
+		RandomFillIn.fillInDatabase(em);
     	
 		em.getTransaction().commit();
 		em.close();
